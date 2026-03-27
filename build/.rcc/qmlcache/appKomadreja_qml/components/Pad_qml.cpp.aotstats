@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 2,
                             "column": 12,
-                            "durationMicroseconds": 322,
+                            "durationMicroseconds": 317,
                             "functionName": "color",
                             "line": 11,
                             "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant"
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 2,
                             "column": 15,
-                            "durationMicroseconds": 24,
+                            "durationMicroseconds": 30,
                             "functionName": "text",
                             "line": 18,
                             "message": "Cannot access value for name padName"
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 40,
+                            "durationMicroseconds": 39,
                             "functionName": "centerIn",
                             "line": 17,
                             "message": ""
@@ -32,7 +32,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 162,
+                            "durationMicroseconds": 182,
                             "functionName": "onPressed",
                             "line": 27,
                             "message": "Cannot access value for name audioEngine"
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 35,
+                            "durationMicroseconds": 38,
                             "functionName": "fill",
                             "line": 26,
                             "message": ""
@@ -48,7 +48,7 @@
                         {
                             "codegenResult": 0,
                             "column": 63,
-                            "durationMicroseconds": 40,
+                            "durationMicroseconds": 43,
                             "functionName": "type",
                             "line": 36,
                             "message": ""

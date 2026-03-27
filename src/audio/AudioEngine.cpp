@@ -12,8 +12,10 @@ void AudioEngine::data_callback(ma_device* pDevice, void* pOutput, const void* p
 }
 
 AudioEngine::AudioEngine(QObject *parent)
-    : QObject(parent), m_isInitialized(false)
+    : QObject(parent), m_isInitialized(false), m_isRecording(false), m_recordPosition(0)
 {
+    // Pre-allocate 60 seconds of stereo audio at 48kHz
+    m_recordBuffer.resize(48000 * 2 * 60);
 }
 
 AudioEngine::~AudioEngine()
@@ -32,9 +34,12 @@ AudioEngine::~AudioEngine()
 
 bool AudioEngine::init()
 {
-    ma_device_config config = ma_device_config_init(ma_device_type_playback);
+    ma_device_config config = ma_device_config_init(ma_device_type_duplex);
     config.playback.format   = ma_format_f32;   // Float 32
     config.playback.channels = 2;               // Stereo
+    config.capture.format    = ma_format_f32;   // Float 32
+    config.capture.channels  = 2;               // Stereo
+    config.capture.shareMode = ma_share_mode_shared;
     config.sampleRate        = 48000;
     config.dataCallback      = data_callback;
     config.pUserData         = this;
@@ -94,6 +99,8 @@ void AudioEngine::loadSample(int padIndex, const QString& filePath)
     sample.channels = 2;
     sample.sampleRate = 48000;
 
+    std::lock_guard<std::mutex> lock(m_audioMutex);
+
     // Free previous if exists
     if (m_samples.contains(padIndex)) {
         ma_free(m_samples[padIndex].pData, nullptr);
@@ -135,10 +142,76 @@ void AudioEngine::stopSample(int padIndex)
     }
 }
 
+void AudioEngine::startRecording()
+{
+    m_recordPosition.store(0);
+    m_isRecording.store(true);
+    qDebug() << "Started recording...";
+}
+
+void AudioEngine::stopRecording()
+{
+    m_isRecording.store(false);
+    qDebug() << "Stopped recording. Captured frames:" << (m_recordPosition.load() / 2);
+}
+
+void AudioEngine::assignRecordingToPad(int padIndex)
+{
+    size_t samplesRecorded = m_recordPosition.load();
+    if (samplesRecorded == 0) {
+        qWarning() << "Nothing recorded to assign.";
+        return;
+    }
+
+    ma_uint64 frameCount = samplesRecorded / 2;
+    
+    // Allocate memory for the sample
+    float* pData = (float*)ma_malloc(samplesRecorded * sizeof(float), nullptr);
+    if (!pData) {
+        qWarning() << "Failed to allocate memory for recorded sample.";
+        return;
+    }
+    
+    std::memcpy(pData, m_recordBuffer.data(), samplesRecorded * sizeof(float));
+    
+    SampleData sample;
+    sample.pData = pData;
+    sample.frameCount = frameCount;
+    sample.channels = 2;
+    sample.sampleRate = 48000;
+
+    std::lock_guard<std::mutex> lock(m_audioMutex);
+    // Free previous if exists
+    if (m_samples.contains(padIndex)) {
+        if (m_samples[padIndex].pData) {
+            ma_free(m_samples[padIndex].pData, nullptr);
+        }
+    }
+
+    m_samples[padIndex] = sample;
+    qDebug() << "Assigned recording to pad" << padIndex << "frames:" << frameCount;
+}
+
 void AudioEngine::processAudio(float* pOutput, const float* pInput, ma_uint32 frameCount)
 {
     // Clear output buffer
     std::memset(pOutput, 0, frameCount * 2 * sizeof(float));
+
+    // Capture step
+    if (m_isRecording.load() && pInput != nullptr) {
+        size_t pos = m_recordPosition.load();
+        size_t availableSpace = m_recordBuffer.size() - pos;
+        size_t samplesToWrite = frameCount * 2; // 2 channels
+        
+        if (samplesToWrite > availableSpace) {
+            samplesToWrite = availableSpace; // don't overflow
+        }
+        
+        if (samplesToWrite > 0) {
+            std::memcpy(m_recordBuffer.data() + pos, pInput, samplesToWrite * sizeof(float));
+            m_recordPosition.fetch_add(samplesToWrite);
+        }
+    }
 
     std::lock_guard<std::mutex> lock(m_audioMutex);
 

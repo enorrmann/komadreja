@@ -46,7 +46,10 @@ template <> constexpr inline auto AudioEngine::qt_create_metaobjectdata<qt_meta_
         "filePath",
         "playSample",
         "velocity",
-        "stopSample"
+        "stopSample",
+        "startRecording",
+        "stopRecording",
+        "assignRecordingToPad"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -66,6 +69,14 @@ template <> constexpr inline auto AudioEngine::qt_create_metaobjectdata<qt_meta_
         }}),
         // Method 'stopSample'
         QtMocHelpers::MethodData<void(int)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 4 },
+        }}),
+        // Method 'startRecording'
+        QtMocHelpers::MethodData<void()>(9, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'stopRecording'
+        QtMocHelpers::MethodData<void()>(10, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'assignRecordingToPad'
+        QtMocHelpers::MethodData<void(int)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Int, 4 },
         }}),
     };
@@ -97,6 +108,9 @@ void AudioEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 2: _t->playSample((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<float>>(_a[2]))); break;
         case 3: _t->playSample((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         case 4: _t->stopSample((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->startRecording(); break;
+        case 6: _t->stopRecording(); break;
+        case 7: _t->assignRecordingToPad((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -121,14 +135,14 @@ int AudioEngine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
 }

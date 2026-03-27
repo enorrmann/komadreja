@@ -57,8 +57,13 @@ Item {
                 id: padArea
                 anchors.fill: parent
                 onPressed: {
-                    audioEngine.playSample(model.padIndex, 1.0)
-                    scaleAnim.restart()
+                    if (mainWindow.assignRecordingMode) {
+                        audioEngine.assignRecordingToPad(model.padIndex)
+                        mainWindow.assignRecordingMode = false
+                    } else {
+                        audioEngine.playSample(model.padIndex, 1.0)
+                        scaleAnim.restart()
+                    }
                 }
             }
 

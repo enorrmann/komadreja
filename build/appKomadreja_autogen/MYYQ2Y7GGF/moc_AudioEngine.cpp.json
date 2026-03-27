@@ -2,12 +2,12 @@
     "classes": [
         {
             "className": "AudioEngine",
-            "lineNumber": 24,
+            "lineNumber": 26,
             "methods": [
                 {
                     "access": "public",
                     "index": 0,
-                    "lineNumber": 31,
+                    "lineNumber": 33,
                     "name": "init",
                     "returnType": "bool"
                 },
@@ -24,7 +24,7 @@
                         }
                     ],
                     "index": 1,
-                    "lineNumber": 32,
+                    "lineNumber": 34,
                     "name": "loadSample",
                     "returnType": "void"
                 },
@@ -41,7 +41,7 @@
                         }
                     ],
                     "index": 2,
-                    "lineNumber": 33,
+                    "lineNumber": 35,
                     "name": "playSample",
                     "returnType": "void"
                 },
@@ -55,7 +55,7 @@
                     ],
                     "index": 3,
                     "isCloned": true,
-                    "lineNumber": 33,
+                    "lineNumber": 35,
                     "name": "playSample",
                     "returnType": "void"
                 },
@@ -68,8 +68,35 @@
                         }
                     ],
                     "index": 4,
-                    "lineNumber": 34,
+                    "lineNumber": 36,
                     "name": "stopSample",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "lineNumber": 39,
+                    "name": "startRecording",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "lineNumber": 40,
+                    "name": "stopRecording",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "padIndex",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 7,
+                    "lineNumber": 41,
+                    "name": "assignRecordingToPad",
                     "returnType": "void"
                 }
             ],

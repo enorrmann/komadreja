@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 109,
+                            "durationMicroseconds": 114,
                             "functionName": "top",
                             "line": 10,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 105,
+                            "durationMicroseconds": 106,
                             "functionName": "model",
                             "line": 16,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 57,
+                            "durationMicroseconds": 56,
                             "functionName": "cellWidth",
                             "line": 33,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 247,
+                            "durationMicroseconds": 235,
                             "functionName": "model",
                             "line": 37,
                             "message": "Cannot access value for name padModel"
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 59,
+                            "durationMicroseconds": 57,
                             "functionName": "top",
                             "line": 28,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 43,
+                            "durationMicroseconds": 44,
                             "functionName": "left",
                             "line": 30,
                             "message": ""
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 43,
+                            "durationMicroseconds": 42,
                             "functionName": "right",
                             "line": 31,
                             "message": ""
@@ -96,7 +96,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 27,
+                            "durationMicroseconds": 26,
                             "functionName": "width",
                             "line": 40,
                             "message": "Cannot access value for name gridView"
@@ -112,7 +112,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 64,
+                            "durationMicroseconds": 60,
                             "functionName": "color",
                             "line": 43,
                             "message": "Cannot access value for name model"
@@ -136,15 +136,15 @@
                         {
                             "codegenResult": 2,
                             "column": 28,
-                            "durationMicroseconds": 184,
+                            "durationMicroseconds": 495,
                             "functionName": "onPressed",
                             "line": 59,
-                            "message": "Cannot access value for name audioEngine"
+                            "message": "Cannot access value for name mainWindow"
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 35,
+                            "durationMicroseconds": 37,
                             "functionName": "fill",
                             "line": 58,
                             "message": ""
@@ -152,17 +152,17 @@
                         {
                             "codegenResult": 0,
                             "column": 71,
-                            "durationMicroseconds": 40,
+                            "durationMicroseconds": 36,
                             "functionName": "type",
-                            "line": 68,
+                            "line": 73,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 71,
-                            "durationMicroseconds": 32,
+                            "durationMicroseconds": 33,
                             "functionName": "type",
-                            "line": 69,
+                            "line": 74,
                             "message": ""
                         }
                     ],

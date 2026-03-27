@@ -5,6 +5,8 @@
 #include <QString>
 #include <QMap>
 #include <mutex>
+#include <atomic>
+#include <vector>
 #include "miniaudio.h"
 
 struct SampleData {
@@ -33,12 +35,22 @@ public:
     Q_INVOKABLE void playSample(int padIndex, float velocity = 1.0f);
     Q_INVOKABLE void stopSample(int padIndex);
 
+    // Recording API
+    Q_INVOKABLE void startRecording();
+    Q_INVOKABLE void stopRecording();
+    Q_INVOKABLE void assignRecordingToPad(int padIndex);
+
     // Audio callback from miniaudio
     void processAudio(float* pOutput, const float* pInput, ma_uint32 frameCount);
 
 private:
     ma_device m_device;
     bool m_isInitialized;
+
+    // Recording variables
+    std::atomic<bool> m_isRecording;
+    std::vector<float> m_recordBuffer;
+    std::atomic<size_t> m_recordPosition;
 
     // A map of pad index to sample data
     QMap<int, SampleData> m_samples;
