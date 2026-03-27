@@ -1,11 +1,12 @@
 #include "PadModel.h"
 #include <QColor>
+#include "config.h"
 
 PadModel::PadModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    // Komadreja has 64 pads (4 banks of 16), let's create 64
-    for (int i = 0; i < 64; ++i) {
+
+    for (int i = 0; i < NUM_PADS; ++i) {
         PadData pad;
         pad.index = i;
         pad.name = QString::number(i + 1);
