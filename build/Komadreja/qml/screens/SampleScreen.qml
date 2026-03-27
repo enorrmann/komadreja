@@ -40,15 +40,23 @@ Item {
             width: gridView.cellWidth - 10
             height: gridView.cellHeight - 10
             radius: 8
-            color: padArea.pressed ? Qt.darker(model.padColor, 1.2) : model.padColor
             
-            border.color: "#FFFFFF"
+            // Check if this pad has a sample assigned
+            property bool hasAudio: audioEngine.hasSample(model.padIndex)
+            
+            // Empty pad is slightly darker, filled pad uses its normal color
+            // Pressing an empty pad shows red, pressing a filled pad shows a darker version of its color
+            color: hasAudio ? (padArea.pressed ? Qt.darker(model.padColor, 1.2) : model.padColor) 
+                            : (padArea.pressed ? "#e74c3c" : Qt.darker(model.padColor, 2.0))
+            
+            // Add a clear border when empty vs filled
+            border.color: hasAudio ? "#FFFFFF" : "#555555"
             border.width: 1
             
             Text {
                 anchors.centerIn: parent
                 text: model.padName
-                color: "white"
+                color: hasAudio ? "white" : "#AAAAAA"
                 font.bold: true
                 font.pixelSize: 18
             }
@@ -56,13 +64,34 @@ Item {
             MouseArea {
                 id: padArea
                 anchors.fill: parent
+                property bool isRecordingOnThisPad: false
+
                 onPressed: {
-                    if (mainWindow.assignRecordingMode) {
-                        audioEngine.assignRecordingToPad(model.padIndex)
-                        mainWindow.assignRecordingMode = false
+                    if (!parent.hasAudio) {
+                        // It's empty: Start recording
+                        audioEngine.startRecording()
+                        isRecordingOnThisPad = true
                     } else {
+                        // It's full: Play the sample
                         audioEngine.playSample(model.padIndex, 1.0)
                         scaleAnim.restart()
+                    }
+                }
+
+                onCanceled: {
+                    if (isRecordingOnThisPad) {
+                        audioEngine.stopRecording()
+                        isRecordingOnThisPad = false
+                    }
+                }
+
+                onReleased: {
+                    if (isRecordingOnThisPad) {
+                        audioEngine.stopRecording()
+                        audioEngine.assignRecordingToPad(model.padIndex)
+                        isRecordingOnThisPad = false
+                        // Update visual status
+                        parent.hasAudio = audioEngine.hasSample(model.padIndex)
                     }
                 }
             }

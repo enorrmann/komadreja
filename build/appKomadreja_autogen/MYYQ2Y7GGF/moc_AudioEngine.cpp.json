@@ -98,6 +98,19 @@
                     "lineNumber": 41,
                     "name": "assignRecordingToPad",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "padIndex",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 8,
+                    "lineNumber": 42,
+                    "name": "hasSample",
+                    "returnType": "bool"
                 }
             ],
             "object": true,

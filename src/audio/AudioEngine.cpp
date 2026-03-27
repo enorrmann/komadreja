@@ -192,6 +192,12 @@ void AudioEngine::assignRecordingToPad(int padIndex)
     qDebug() << "Assigned recording to pad" << padIndex << "frames:" << frameCount;
 }
 
+bool AudioEngine::hasSample(int padIndex)
+{
+    std::lock_guard<std::mutex> lock(m_audioMutex);
+    return m_samples.contains(padIndex) && m_samples[padIndex].pData != nullptr;
+}
+
 void AudioEngine::processAudio(float* pOutput, const float* pInput, ma_uint32 frameCount)
 {
     // Clear output buffer

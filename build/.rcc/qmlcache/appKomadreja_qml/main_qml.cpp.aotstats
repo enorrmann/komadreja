@@ -8,49 +8,49 @@
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 123,
+                            "durationMicroseconds": 124,
                             "functionName": "width",
-                            "line": 20,
+                            "line": 18,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 45,
+                            "durationMicroseconds": 43,
                             "functionName": "centerIn",
-                            "line": 25,
+                            "line": 23,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 16,
-                            "durationMicroseconds": 55,
+                            "durationMicroseconds": 43,
                             "functionName": "width",
-                            "line": 36,
+                            "line": 34,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 81,
+                            "durationMicroseconds": 59,
                             "functionName": "top",
-                            "line": 37,
+                            "line": 35,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 73,
+                            "durationMicroseconds": 47,
                             "functionName": "bottom",
-                            "line": 38,
+                            "line": 36,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 27,
-                            "durationMicroseconds": 34,
+                            "durationMicroseconds": 30,
                             "functionName": "fill",
-                            "line": 41,
+                            "line": 39,
                             "message": ""
                         },
                         {
@@ -58,7 +58,7 @@
                             "column": 16,
                             "durationMicroseconds": 40,
                             "functionName": "width",
-                            "line": 48,
+                            "line": 46,
                             "message": ""
                         },
                         {
@@ -66,47 +66,15 @@
                             "column": 25,
                             "durationMicroseconds": 48,
                             "functionName": "bottom",
-                            "line": 50,
+                            "line": 48,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 33,
+                            "durationMicroseconds": 30,
                             "functionName": "centerIn",
-                            "line": 55,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 33,
-                            "durationMicroseconds": 1,
-                            "functionName": "button",
-                            "line": 62,
-                            "message": "Could not find property \"button\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 32,
-                            "durationMicroseconds": 155,
-                            "functionName": "onPressed",
-                            "line": 68,
-                            "message": "Cannot access value for name audioEngine"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 33,
-                            "durationMicroseconds": 120,
-                            "functionName": "onReleased",
-                            "line": 71,
-                            "message": "Cannot access value for name audioEngine"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 35,
-                            "durationMicroseconds": 40,
-                            "functionName": "fill",
-                            "line": 67,
+                            "line": 53,
                             "message": ""
                         }
                     ],

@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 114,
+                            "durationMicroseconds": 169,
                             "functionName": "top",
                             "line": 10,
                             "message": ""
@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 50,
+                            "durationMicroseconds": 65,
                             "functionName": "horizontalCenter",
                             "line": 11,
                             "message": ""
@@ -24,7 +24,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 106,
+                            "durationMicroseconds": 138,
                             "functionName": "model",
                             "line": 16,
                             "message": "Cannot generate efficient code for storing an array in a non-sequence type"
@@ -40,7 +40,7 @@
                         {
                             "codegenResult": 0,
                             "column": 20,
-                            "durationMicroseconds": 56,
+                            "durationMicroseconds": 62,
                             "functionName": "cellWidth",
                             "line": 33,
                             "message": ""
@@ -56,7 +56,7 @@
                         {
                             "codegenResult": 2,
                             "column": 16,
-                            "durationMicroseconds": 235,
+                            "durationMicroseconds": 402,
                             "functionName": "model",
                             "line": 37,
                             "message": "Cannot access value for name padModel"
@@ -64,7 +64,7 @@
                         {
                             "codegenResult": 0,
                             "column": 22,
-                            "durationMicroseconds": 57,
+                            "durationMicroseconds": 98,
                             "functionName": "top",
                             "line": 28,
                             "message": ""
@@ -72,7 +72,7 @@
                         {
                             "codegenResult": 0,
                             "column": 25,
-                            "durationMicroseconds": 45,
+                            "durationMicroseconds": 66,
                             "functionName": "bottom",
                             "line": 29,
                             "message": ""
@@ -80,7 +80,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 44,
+                            "durationMicroseconds": 52,
                             "functionName": "left",
                             "line": 30,
                             "message": ""
@@ -88,7 +88,7 @@
                         {
                             "codegenResult": 0,
                             "column": 24,
-                            "durationMicroseconds": 42,
+                            "durationMicroseconds": 60,
                             "functionName": "right",
                             "line": 31,
                             "message": ""
@@ -96,7 +96,7 @@
                         {
                             "codegenResult": 2,
                             "column": 20,
-                            "durationMicroseconds": 26,
+                            "durationMicroseconds": 51,
                             "functionName": "width",
                             "line": 40,
                             "message": "Cannot access value for name gridView"
@@ -104,65 +104,105 @@
                         {
                             "codegenResult": 2,
                             "column": 21,
-                            "durationMicroseconds": 17,
+                            "durationMicroseconds": 18,
                             "functionName": "height",
                             "line": 41,
                             "message": "Cannot access value for name gridView"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 20,
-                            "durationMicroseconds": 60,
-                            "functionName": "color",
-                            "line": 43,
-                            "message": "Cannot access value for name model"
+                            "column": 37,
+                            "durationMicroseconds": 137,
+                            "functionName": "hasAudio",
+                            "line": 45,
+                            "message": "Cannot access value for name audioEngine"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 23,
-                            "durationMicroseconds": 19,
-                            "functionName": "text",
-                            "line": 50,
+                            "column": 20,
+                            "durationMicroseconds": 133,
+                            "functionName": "color",
+                            "line": 49,
                             "message": "Cannot access value for name model"
                         },
                         {
                             "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 115,
+                            "functionName": "color",
+                            "line": 53,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 25,
+                            "functionName": "text",
+                            "line": 58,
+                            "message": "Cannot access value for name model"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 22,
+                            "functionName": "color",
+                            "line": 59,
+                            "message": "Cannot access value for name hasAudio"
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 35,
-                            "durationMicroseconds": 35,
+                            "durationMicroseconds": 45,
                             "functionName": "centerIn",
-                            "line": 49,
+                            "line": 57,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 28,
-                            "durationMicroseconds": 495,
+                            "durationMicroseconds": 323,
                             "functionName": "onPressed",
-                            "line": 59,
-                            "message": "Cannot access value for name mainWindow"
+                            "line": 69,
+                            "message": "Cannot load property hasAudio from (component in /home/emilio/git/koala_klone/qml/screens/SampleScreen.qml)::parent with type QQuickItem."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 29,
+                            "durationMicroseconds": 121,
+                            "functionName": "onCanceled",
+                            "line": 81,
+                            "message": "Cannot access value for name audioEngine"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 29,
+                            "durationMicroseconds": 360,
+                            "functionName": "onReleased",
+                            "line": 88,
+                            "message": "Cannot access value for name audioEngine"
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 37,
-                            "functionName": "fill",
-                            "line": 58,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 71,
                             "durationMicroseconds": 36,
-                            "functionName": "type",
-                            "line": 73,
+                            "functionName": "fill",
+                            "line": 66,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 71,
-                            "durationMicroseconds": 33,
+                            "durationMicroseconds": 42,
                             "functionName": "type",
-                            "line": 74,
+                            "line": 102,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 71,
+                            "durationMicroseconds": 32,
+                            "functionName": "type",
+                            "line": 103,
                             "message": ""
                         }
                     ],

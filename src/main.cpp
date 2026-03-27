@@ -15,10 +15,11 @@ int main(int argc, char *argv[])
     }
 
     // Load sample for all pads
-    QString samplePath = ":/assets/samples/kick.wav";
-    for (int i = 0; i < 64; ++i) {
-        audioEngine.loadSample(i, samplePath);
-    }
+    // (Commented out so pads start empty for recording testing)
+    // QString samplePath = ":/assets/samples/kick.wav";
+    // for (int i = 0; i < 64; ++i) {
+    //     audioEngine.loadSample(i, samplePath);
+    // }
 
     // Initialize Models
     PadModel padModel;

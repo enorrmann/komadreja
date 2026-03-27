@@ -39,6 +39,7 @@ public:
     Q_INVOKABLE void startRecording();
     Q_INVOKABLE void stopRecording();
     Q_INVOKABLE void assignRecordingToPad(int padIndex);
+    Q_INVOKABLE bool hasSample(int padIndex);
 
     // Audio callback from miniaudio
     void processAudio(float* pOutput, const float* pInput, ma_uint32 frameCount);

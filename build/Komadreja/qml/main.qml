@@ -12,8 +12,6 @@ Window {
     title: qsTr("Komadreja")
     color: "#1E1E1E"
 
-    property bool assignRecordingMode: false
-
     // Top Navigation (Stub)
     Rectangle {
         id: navBar
@@ -54,26 +52,7 @@ Window {
         Row {
             anchors.centerIn: parent
             spacing: 15
-            Button {
-                id: micButton
-                text: "MIC"
-
-                // Visual feedback for recording/assigning states
-                palette.button: mainWindow.assignRecordingMode ? "#3498db" : (micMouseArea.pressed ? "#e74c3c" : "#444444")
-                palette.buttonText: "white"
-
-                MouseArea {
-                    id: micMouseArea
-                    anchors.fill: parent
-                    onPressed: {
-                        audioEngine.startRecording()
-                    }
-                    onReleased: {
-                        audioEngine.stopRecording()
-                        mainWindow.assignRecordingMode = true
-                    }
-                }
-            }
+            Button { text: "MIC" }
             Button { text: "PITCH" }
             Button { text: "PAN" }
             Button { text: "VOL" }
