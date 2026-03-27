@@ -1,9 +1,0 @@
---resource
-/home/emilio/git/koala_klone/build_android/.qt/rcc/resources.qrc
---resource
-/home/emilio/git/koala_klone/build_android/.qt/rcc/qmake_Koala.qrc
---resource
-/home/emilio/git/koala_klone/build_android/.qt/rcc/appKoalaKlone_raw_qml_0.qrc
-/Koala/qml/main.qml
-/Koala/qml/components/Pad.qml
-/Koala/qml/screens/SampleScreen.qml

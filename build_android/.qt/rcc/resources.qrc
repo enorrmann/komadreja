@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="assets/samples/kick.wav">/home/emilio/git/koala_klone/assets/samples/kick.wav</file>
-  </qresource>
-</RCC>
-

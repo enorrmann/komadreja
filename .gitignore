@@ -1,0 +1,82 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+build-*/
+build_android/
+cmake-build-*/
+bin/
+out/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*~
+*.user
+*.user.*
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Makefile
+_deps/
+
+# Qt generated files
+*.qmlc
+*.jsc
+moc_*.cpp
+mocs_compilation.cpp
+qrc_*.cpp
+ui_*.h
+*.pyc
+
+# Android specific
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# Python
+__pycache__/
+
+# OS specific
+.DS_Store
+Thumbs.db

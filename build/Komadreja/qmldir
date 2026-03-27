@@ -1,7 +1,0 @@
-module Komadreja
-typeinfo appKomadreja.qmltypes
-prefer :/Komadreja/
-Pad 1.0 qml/components/Pad.qml
-SampleScreen 1.0 qml/screens/SampleScreen.qml
-depends QtQuick
-

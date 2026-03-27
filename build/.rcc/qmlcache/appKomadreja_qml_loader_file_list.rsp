@@ -1,9 +1,0 @@
---resource
-/home/emilio/git/koala_klone/build/.qt/rcc/resources.qrc
---resource
-/home/emilio/git/koala_klone/build/.qt/rcc/qmake_Komadreja.qrc
---resource
-/home/emilio/git/koala_klone/build/.qt/rcc/appKomadreja_raw_qml_0.qrc
-/Komadreja/qml/main.qml
-/Komadreja/qml/components/Pad.qml
-/Komadreja/qml/screens/SampleScreen.qml

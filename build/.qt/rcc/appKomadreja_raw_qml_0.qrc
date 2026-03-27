@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="/Komadreja/">
-    <file alias="qml/main.qml">/home/emilio/git/koala_klone/qml/main.qml</file>
-    <file alias="qml/components/Pad.qml">/home/emilio/git/koala_klone/qml/components/Pad.qml</file>
-    <file alias="qml/screens/SampleScreen.qml">/home/emilio/git/koala_klone/qml/screens/SampleScreen.qml</file>
-  </qresource>
-</RCC>
-

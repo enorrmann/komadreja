@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/Koala">/home/emilio/git/koala_klone/build_android/Koala</file>
-
-  </qresource>
-</RCC>

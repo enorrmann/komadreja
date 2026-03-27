@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/Komadreja">/home/emilio/git/koala_klone/build/Komadreja</file>
-
-  </qresource>
-</RCC>

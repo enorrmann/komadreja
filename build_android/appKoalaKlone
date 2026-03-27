@@ -1,8 +1,0 @@
-#!/bin/sh
-
-/home/emilio/Qt/6.10.1/gcc_64/libexec/qt-android-runner.py \
-    --adb "/home/emilio/Android/Sdk/platform-tools/adb" \
-    --build-path "/home/emilio/git/koala_klone/build_android/android-build" \
-    --apk "/home/emilio/git/koala_klone/build_android/android-build/appKoalaKlone.apk" \
-    $@
-
