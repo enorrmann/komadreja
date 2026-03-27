@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/Koala">
+    <file alias="qmldir">/home/emilio/git/koala_klone/build_android/Koala/qmldir</file>
+  </qresource>
+</RCC>
+

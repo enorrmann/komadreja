@@ -1,0 +1,71 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                        {
+                            "codegenResult": 2,
+                            "column": 12,
+                            "durationMicroseconds": 271,
+                            "functionName": "color",
+                            "line": 11,
+                            "message": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 15,
+                            "durationMicroseconds": 23,
+                            "functionName": "text",
+                            "line": 18,
+                            "message": "Cannot access value for name padName"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 34,
+                            "functionName": "centerIn",
+                            "line": 17,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 149,
+                            "functionName": "onPressed",
+                            "line": 27,
+                            "message": "Cannot access value for name audioEngine"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 32,
+                            "functionName": "fill",
+                            "line": 26,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 63,
+                            "durationMicroseconds": 55,
+                            "functionName": "type",
+                            "line": 36,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 63,
+                            "durationMicroseconds": 36,
+                            "functionName": "type",
+                            "line": 37,
+                            "message": ""
+                        }
+                    ],
+                    "filePath": "/home/emilio/git/koala_klone/qml/components/Pad.qml"
+                }
+            ],
+            "moduleId": "Koala(appKoalaKlone)"
+        }
+    ]
+}

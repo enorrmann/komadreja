@@ -1,0 +1,7 @@
+module Koala
+typeinfo appKoalaKlone.qmltypes
+prefer :/Koala/
+Pad 1.0 qml/components/Pad.qml
+SampleScreen 1.0 qml/screens/SampleScreen.qml
+depends QtQuick
+

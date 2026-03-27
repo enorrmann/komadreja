@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/Komadreja">
+    <file alias="qmldir">/home/emilio/git/koala_klone/build/Komadreja/qmldir</file>
+  </qresource>
+</RCC>
+

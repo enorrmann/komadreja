@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appKoalaKlone_FILE /home/emilio/git/koala_klone/build_android/libappKoalaKlone_arm64-v8a.so)
+set(__QT_DEPLOY_TARGET_appKoalaKlone_TYPE MODULE_LIBRARY)

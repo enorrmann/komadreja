@@ -1,0 +1,15 @@
+-rootPath
+/home/emilio/git/koala_klone
+-cmake-output
+-output-file
+/home/emilio/git/koala_klone/build_android/.qt/qml_imports/appKoalaKlone_conf.cmake
+-importPath
+/home/emilio/git/koala_klone/build_android/Koala
+-importPath
+/home/emilio/git/koala_klone/build_android
+-importPath
+/home/emilio/Qt/6.10.1/android_arm64_v8a/qml
+-qrcFiles
+/home/emilio/git/koala_klone/build_android/.qt/rcc/resources.qrc
+/home/emilio/git/koala_klone/build_android/.qt/rcc/qmake_Koala.qrc
+/home/emilio/git/koala_klone/build_android/.qt/rcc/appKoalaKlone_raw_qml_0.qrc

@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appKomadreja_FILE /home/emilio/git/koala_klone/build/appKomadreja)
+set(__QT_DEPLOY_TARGET_appKomadreja_TYPE EXECUTABLE)

@@ -1,0 +1,33 @@
+{
+    "classes": [
+        {
+            "className": "PadModel",
+            "lineNumber": 15,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 0,
+                    "lineNumber": 32,
+                    "name": "activatePad",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "PadModel",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QAbstractListModel"
+                }
+            ]
+        }
+    ],
+    "inputFile": "PadModel.h",
+    "outputRevision": 69
+}
